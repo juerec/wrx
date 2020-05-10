@@ -1,6 +1,6 @@
 # wrx - Schedule your weather receivers
 
-####The wrx program does:
+#### The wrx program does:
 
 * starting reception jobs at given time
 * tuning the radio

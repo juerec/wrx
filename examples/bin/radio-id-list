@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for DATEI in `find /sys/devices -name product` ; do
+  NAME=`cat $DATEI`;
+  if [ "$NAME" = "FiFi-SDR" ] ; then
+    PFAD=`echo $DATEI | sed "s/product//"`;
+    echo `cat "$PFAD"serial`
+  fi
+done

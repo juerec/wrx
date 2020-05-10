@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RadioSetupPage</class>
+ <widget class="QDialog" name="RadioSetupPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>812</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="labRadioName">
+     <property name="text">
+      <string>internally name</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="ledRadioName">
+     <property name="maxLength">
+      <number>12</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labNameLang">
+     <property name="text">
+      <string>Visible name</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="ledRadioNameLong">
+     <property name="maxLength">
+      <number>16</number>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labRadioAvtivated">
+     <property name="text">
+      <string>Use this Radio</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QCheckBox" name="chbRadioActivated">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" rowspan="4">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="rbtPhysicalMount">
+        <property name="text">
+         <string>Physical Mount</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rbtSoundcardName">
+        <property name="text">
+         <string>Soundcard Name</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rbtAlsaDevNo">
+        <property name="text">
+         <string>ALSA Device</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rbtSerialNo">
+        <property name="text">
+         <string>Serial No.</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="2" rowspan="2">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>133</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="2" rowspan="2">
+    <widget class="QPushButton" name="pbtFindSoundcard">
+     <property name="text">
+      <string>Find Value</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="3">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>209</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="labSoundcardIdent">
+     <property name="text">
+      <string>Soundcard Identiifier</string>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledSoundcardIdent">
+     <property name="maxLength">
+      <number>256</number>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="4">
+    <widget class="QLabel" name="labInfoSoundCardIdent">
+     <property name="toolTip">
+      <string>Serial No. from USB device</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources/wrx.qrc">:/img/msg_info.xpm</pixmap>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="labStartCommand">
+     <property name="text">
+      <string>Start command</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledStartCommand">
+     <property name="maxLength">
+      <number>256</number>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="4">
+    <widget class="QLabel" name="labInfoStartCommand">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Command for setting up radio. &lt;/p&gt;&lt;p&gt;The variales are:&lt;/p&gt;&lt;p&gt;%serial --&amp;gt; Soundcard identifier&lt;/p&gt;&lt;p&gt;%Hz --&amp;gt; Frequency in Hz like 4582000&lt;/p&gt;&lt;p&gt;%kHz --&amp;gt; Frequency in kHz like 4582.000&lt;/p&gt;&lt;p&gt;%MHz --&amp;gt; Frequency in kHz like 4.582000&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources/wrx.qrc">:/img/msg_info.xpm</pixmap>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="labCheckCommand">
+     <property name="text">
+      <string>Check command</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledCheckCommand">
+     <property name="maxLength">
+      <number>256</number>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="4">
+    <widget class="QLabel" name="labInfoCheckCommand">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Command which writes radio's frequency to stdout&lt;/p&gt;&lt;p&gt;The varialbles are:&lt;/p&gt;&lt;p&gt;%serial --&amp;gt; Soundcard identifier&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources/wrx.qrc">:/img/msg_info.xpm</pixmap>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="labStopCommand">
+     <property name="text">
+      <string>Stop command</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="1" colspan="3">
+    <widget class="QLineEdit" name="ledStopCommand">
+     <property name="maxLength">
+      <number>256</number>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="4">
+    <widget class="QLabel" name="labInfoStopCommand">
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Command for stopping extern running process&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="resources/wrx.qrc">:/img/msg_info.xpm</pixmap>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="0" rowspan="4">
+    <widget class="QLabel" name="labSoundcardMethode">
+     <property name="text">
+      <string>&lt;br&gt;Methode to identify sound card</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resources/wrx.qrc"/>
+ </resources>
+ <connections/>
+</ui>

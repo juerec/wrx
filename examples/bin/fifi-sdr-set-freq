@@ -1,0 +1,16 @@
+#!/bin/sh
+
+rockprog --serial=$1 -w --vco --freq=$2
+EX=$?
+if [ ! "$EX" = "0" ] ; then
+  exit $EX
+fi
+
+FREQ=`rockprog --serial=$1 --vco`
+EX=$?
+if [ ! "$EX" = "0" ] ; then
+  echo $FREQ
+  exit $EX
+fi
+
+echo $FREQ | awk ' { print $3  } ' | sed "s/\.//"

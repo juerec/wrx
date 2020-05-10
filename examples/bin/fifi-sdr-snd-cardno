@@ -1,0 +1,12 @@
+#!/bin/sh
+
+for DATEI in `find /sys/devices -name product` ; do
+  NAME=`cat $DATEI`;
+  if [ "$NAME" = "FiFi-SDR" ] ; then
+    PFAD=`echo $DATEI | sed "s/product//"`;
+    SERIAL=`cat "$PFAD"serial`
+    if [ "$SERIAL" = "$1" ] ; then
+      echo `find $PFAD -name card* | sed 's|.*card||'`
+    fi
+  fi
+done

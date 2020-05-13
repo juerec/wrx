@@ -2,6 +2,14 @@
 
 DEVEL_ROOT=$HOME/Entwicklung
 
+if [ "$1" = "-r" ] ; then
+  rm FSKDecoder.h
+  rm FSKDecoderOptions.h
+  rm FSKDecodedText.h
+  rm libFSKDecoder.a
+  exit
+fi
+
 ln -s $DEVEL_ROOT/libFSKDecoder/FSKDecoder.h FSKDecoder.h
 ln -s $DEVEL_ROOT/libFSKDecoder/FSKDecoderOptions.h FSKDecoderOptions.h
 ln -s $DEVEL_ROOT/libFSKDecoder/FSKDecodedText.h FSKDecodedText.h

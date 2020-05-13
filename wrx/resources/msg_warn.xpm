@@ -1,6 +1,6 @@
 /* XPM */
 static const char* const msg_warn_xpm[] = {
-"28 28 3 1",
+"28 23 3 1",
 "a c #FFA020",
 "# c #FFA020",
 ". c None",

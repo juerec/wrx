@@ -8,70 +8,70 @@
 SchedTableModel::SchedTableModel(QObject *parent)
                : QAbstractTableModel(parent) {
 
-  lstPixmaps.append(QPixmap(":/img/square-21-red-X.xpm"));
-  lstPixmaps.append(QPixmap(":/img/square-21-grey-R.xpm"));
-  lstPixmaps.append(QPixmap(":/img/square-21-timeconflict.xpm"));
-  lstPixmaps.append(QPixmap(":/img/square-21-grey-X.xpm"));
-  lstPixmaps.append(QPixmap(":/img/square-21-grey.xpm"));
-  lstPixmaps.append(QPixmap(":/img/square-21-yellow.xpm"));
-  lstPixmaps.append(QPixmap(":/img/square-21-red.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/square-21-red-X.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/square-21-grey-R.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/square-21-timeconflict.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/square-21-grey-X.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/square-21-grey.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/square-21-yellow.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/square-21-red.xpm"));
   StartBluePi = lstPixmaps.count();
-  lstPixmaps.append(QPixmap(":/img/circle-21-000deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-009deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-018deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-027deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-036deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-045deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-054deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-063deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-072deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-081deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-090deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-099deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-108deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-117deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-126deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-135deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-144deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-153deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-162deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-171deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-180deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-189deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-198deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-207deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-216deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-225deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-234deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-243deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-252deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-261deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-270deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-279deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-288deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-297deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-306deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-315deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-324deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-333deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-342deg-blue.xpm"));
-  lstPixmaps.append(QPixmap(":/img/circle-21-351deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-000deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-009deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-018deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-027deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-036deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-045deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-054deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-063deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-072deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-081deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-090deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-099deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-108deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-117deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-126deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-135deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-144deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-153deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-162deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-171deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-180deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-189deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-198deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-207deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-216deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-225deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-234deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-243deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-252deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-261deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-270deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-279deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-288deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-297deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-306deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-315deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-324deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-333deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-342deg-blue.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-351deg-blue.xpm"));
   StartOk  = lstPixmaps.count();
-  lstPixmaps.append(QPixmap(":/img/circle-21-green.xpm"));
-  lstPixmaps.append(QPixmap(":/img/decoder-ok-21.png"));
-  lstPixmaps.append(QPixmap(":/img/square-21-green.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/circle-21-green.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/decoder-ok-21.png"));
+  lstPixmaps.append(loadPixmap(":/img/square-21-green.xpm"));
   StartResult = lstPixmaps.count();
-  lstPixmaps.append(QPixmap(":/img/text_off.xpm"));
-  lstPixmaps.append(QPixmap(":/img/text_on.xpm"));
-  lstPixmaps.append(QPixmap(":/img/fax_off.xpm"));
-  lstPixmaps.append(QPixmap(":/img/fax_on.xpm"));
-  lstPixmaps.append(QPixmap(":/img/speaker_off.xpm"));
-  lstPixmaps.append(QPixmap(":/img/speaker_on.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/text_off.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/text_on.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/fax_off.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/fax_on.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/speaker_off.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/speaker_on.xpm"));
   StartMessage = lstPixmaps.count();
-  lstPixmaps.append(QPixmap(":/img/msg_none.xpm"));
-  lstPixmaps.append(QPixmap(":/img/msg_info.xpm"));
-  lstPixmaps.append(QPixmap(":/img/msg_warn.xpm"));
-  lstPixmaps.append(QPixmap(":/img/msg_error.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/msg_none.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/msg_info.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/msg_warn.xpm"));
+  lstPixmaps.append(loadPixmap(":/img/msg_error.xpm"));
 
   for (int i = 0; i < lstPixmaps.count(); i++)
     if (lstPixmaps[i].isNull())
@@ -288,4 +288,13 @@ Qt::ItemFlags SchedTableModel::flags ( const QModelIndex & index ) const {
     break;
   }
   return QAbstractTableModel::flags(index) | flags;
+}
+
+
+// static
+QPixmap SchedTableModel::loadPixmap(const char * PixmapName) {
+  QPixmap pm(PixmapName);
+  if (pm.isNull())
+    logger.error("SchedTableModel::load()", __LINE__, "Could not load Pixmap %s", PixmapName);
+  return pm;
 }

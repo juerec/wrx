@@ -51,6 +51,7 @@ public:
 
 protected :
   QPixmap ProgressPixmap(int Percent) const;
+  static QPixmap loadPixmap(const char * Name);
 
   QList<QPixmap> lstPixmaps;
 

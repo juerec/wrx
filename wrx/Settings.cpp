@@ -48,7 +48,8 @@ int i = 0;
   optCommonCbxRunTimedJobs->setChecked(options.runTimedJobs);
   optCommonRbtTimeUTC->setChecked(options.showTimeAsUTC_new);
   optCommonRbtTimeLocal->setChecked(!options.showTimeAsUTC_new);
-  optCommomCbxLogLevel->setCurrentIndex(optCommomCbxLogLevel->findText(options.LogLevel));
+  QString str = QApplication::translate("twgSettings", qPrintable(options.LogLevel), nullptr);
+  optCommomCbxLogLevel->setCurrentIndex(optCommomCbxLogLevel->findText(str)); //   tr(qPrintable(options.LogLevel))));
 
 // Scheduler
 
@@ -83,7 +84,18 @@ void Settings::on_optCommonPbtSave_clicked() {
   options.confirmQuit = optCommonCbxConfirmToQuit->isChecked();
   options.runTimedJobs = optCommonCbxRunTimedJobs->isChecked();
   options.showTimeAsUTC_new = optCommonRbtTimeUTC->isChecked();
-  options.LogLevel = optCommomCbxLogLevel->currentText();
+  QString str = optCommomCbxLogLevel->currentText();
+  QApplication::translate("twgSettings", qPrintable(options.LogLevel), nullptr);
+  if (QApplication::translate("twgSettings", qPrintable("DEBUG"), nullptr) == str)
+    options.LogLevel = "DEBUG";
+  if (QApplication::translate("twgSettings", qPrintable("INFO"), nullptr) == str)
+    options.LogLevel = "INFO";
+  if (QApplication::translate("twgSettings", qPrintable("WARNING"), nullptr) == str)
+    options.LogLevel = "WARNING";
+  if (QApplication::translate("twgSettings", qPrintable("ERROR"), nullptr) == str)
+    options.LogLevel = "ERROR";
+  if (QApplication::translate("twgSettings", qPrintable("NONE"), nullptr) == str)
+    options.LogLevel = "NONE";
   options.saveOptCommon();
 }
 

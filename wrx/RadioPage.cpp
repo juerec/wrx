@@ -268,9 +268,10 @@ QString CallSign = cbxSender->itemData(cbxSender->currentIndex()).toString();
 bool    canDecode;
 
   pCurrentRadioSetup = RadioSetup::find(CallSign, RadioName);
-  canDecode = pCurrentRadioSetup->frequency->opMode.IdMode == OpMode::RTTY_85 ||
+  canDecode = pCurrentRadioSetup != nullptr && (
+              pCurrentRadioSetup->frequency->opMode.IdMode == OpMode::RTTY_85 ||
               pCurrentRadioSetup->frequency->opMode.IdMode == OpMode::RTTY_450 ||
-              pCurrentRadioSetup->frequency->opMode.IdMode == OpMode::NAVTEX;
+              pCurrentRadioSetup->frequency->opMode.IdMode == OpMode::NAVTEX);
   chbDecoder->setEnabled(canDecode);
   chbDecoderRecord->setEnabled(canDecode);
 }

@@ -172,7 +172,7 @@ static const int  ReceiveJobInfoColWidthDef[5] = { 140, 140, 140, 140, 140 };
   // Root path for output
   if (!settings.contains("Paths/ReceiveResultPath")) {
     logger.error("Options::readPreferences()", __LINE__, "No definition found for \"Paths/ReceiveResultPath\"");
-    ReceiveResultPath = QDir::homePath() + "wrx";
+    ReceiveResultPath = QDir::homePath() + "/wrx";
   } else {
     ReceiveResultPath = settings.value("Paths/ReceiveResultPath").toString();
   }
